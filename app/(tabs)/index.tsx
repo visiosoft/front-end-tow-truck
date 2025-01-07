@@ -8,7 +8,7 @@ const index = () => {
     useEffect(() => {
         (async () => {
             try {
-                let response = await fetch("https://localhost:7215/api/Location");
+                let response = await fetch("https://cartowing-fefzgsd3huazfmfu.centralus-01.azurewebsites.net/api/Location");
                 if (response.ok) {
                     let drivers = await response.json();
                     setDrivers(drivers);
@@ -50,6 +50,7 @@ const index = () => {
                     drivers.map(driver => {
                         return (
                             <Marker
+                                key={driver.driverId}
                                 coordinate={{
                                     latitude: driver.latitude,
                                     longitude: driver.longitude
@@ -57,7 +58,8 @@ const index = () => {
                             >
                                 <Image
                                     source={require("@/assets/images/truck.png")}
-                                    style={{ width: 30, height: 30 }}
+                                    style={{ width: 40, height: 40 }}
+                                    resizeMode='contain'
                                 />
                             </Marker>
                         )
