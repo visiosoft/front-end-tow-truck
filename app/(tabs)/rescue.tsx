@@ -1,5 +1,4 @@
-
-import { View, Text, TouchableOpacity } from "react-native"
+import { View, Text, TouchableOpacity, Dimensions } from "react-native"
 import FuelTruck from "@/assets/images/fuel-truck.png"
 import CarWash from "@/assets/images/car-wash.png"
 import Battery from "@/assets/images/battery.png"
@@ -14,7 +13,6 @@ import Emergency from "@/assets/images/emergency.png"
 import IonIcons from "@expo/vector-icons/Ionicons"
 import MaterialIcons from "@expo/vector-icons/MaterialIcons"
 import ServiceCard from "@/components/Home/ServiceCard"
-import { ImageBackground } from "expo-image"
 import OfferCard from "@/components/Home/OfferCard"
 import { ScrollView } from "react-native-gesture-handler"
 const services = [
@@ -35,7 +33,7 @@ const services = [
         imgSrc: Tyre
     },
     {
-        text: "Minor Service",
+        text: "Service",
         imgSrc: MinorService
     },
     {
@@ -70,16 +68,16 @@ const offers = [
 ];
 function rescue() {
     return (
-        <ScrollView >
-            <View className="w-screen p-5 flex flex-col gap-y-5 bg-white">
-                <View className="w-full flex flex-row justify-between items-baseline">
+        <ScrollView>
+            <View className="p-5 gap-y-7 bg-white">
+                <View className="flex-row justify-between items-baseline">
                     <Text></Text>
                     <Text className="font-bold text-xl text-[#1C1B1F]">Tow Truck</Text>
                     <TouchableOpacity><Text className="text-[#50C4CD] font-semibold">login</Text></TouchableOpacity>
                 </View>
-                <View className="w-full flex flex-row justify-between items-center">
-                    <TouchableOpacity className="w-[49%] bg-[#F7F7F8] rounded-3xl px-2 py-4 flex flex-row justify-between items-center">
-                        <View className="flex flex-row justify-between items-center">
+                <View className="flex-row justify-between items-center">
+                    <TouchableOpacity className="w-[49%] bg-[#F7F7F8] rounded-3xl px-2 py-4 flex-row justify-between items-center">
+                        <View className="flex-row justify-between items-center">
                             <MaterialIcons className="p-1" name="location-on" size={30} color="#888888" />
                             <View>
                                 <Text className="font-bold text-sm">Islamabad</Text>
@@ -88,18 +86,18 @@ function rescue() {
                         </View>
                         <IonIcons name="chevron-down" size={20} color={"#C1C6CF"} />
                     </TouchableOpacity>
-                    <TouchableOpacity className="w-[49%] bg-[#F7F7F8] rounded-3xl px-2 py-4 flex flex-row justify-between items-center">
-                        <View className="flex flex-row justify-between items-center">
+                    <TouchableOpacity className="w-[49%] bg-[#F7F7F8] rounded-3xl px-2 py-4 flex-row justify-between items-center">
+                        <View className="flex-row justify-between items-center">
                             <IonIcons className="p-2" name="car" size={30} color="#888888" />
                             <View>
-                                <Text className="font-bold text-sm">Add Vehicle</Text>
-                                <Text className="font-semibold text-sm text-[#888E9A]">Make & Model</Text>
+                                <Text className="font-bold text-sm">Islamabad</Text>
+                                <Text className="font-semibold text-sm text-[#888E9A]">Delivery</Text>
                             </View>
                         </View>
                         <IonIcons name="chevron-down" size={20} color={"#C1C6CF"} />
                     </TouchableOpacity>
                 </View>
-                <View style={{ height: 200, width: "100%", alignContent: "space-between" }} className="flex-col justify-evenly flex-wrap">
+                <View style={{ flex:1, alignContent:"space-between"}} className="flex-row justify-between flex-wrap">
                     {
                         services.map((service, index) => <ServiceCard key={index} {...service} />)
                     }

@@ -1,11 +1,14 @@
-import { View, Text, TouchableOpacity} from 'react-native'
-import { Image } from 'expo-image'
+import { View, Text, TouchableOpacity, Image} from 'react-native'
 const ServiceCard = ({ text, imgSrc }: { text: string, imgSrc: any }) => {
     return (
-        <TouchableOpacity style={{width:80,height:80}} className="flex-col items-center justify-between">
+        <TouchableOpacity className='my-2' style={{width:"22%",aspectRatio:1/1,justifyContent:"center",alignItems:"center"}}>
             <View
-                className="flex justify-center items-center"
                 style={{
+                    flex: 1,
+                    flexDirection:"row",
+                    aspectRatio: 1 / 1,
+                    justifyContent: 'center',
+                    alignItems:'center',
                     borderWidth: 2,
                     borderColor: '#f6f6f6',
                     borderRadius: 20,
@@ -18,11 +21,11 @@ const ServiceCard = ({ text, imgSrc }: { text: string, imgSrc: any }) => {
             >
                 <Image
                     source={imgSrc}
-                    contentFit="contain"
-                    style={{ width: 70, height: 70 }}
-                />
+                    resizeMode='contain'
+                    style={{flex:0.8,aspectRatio:1/1}}
+                    />
             </View>
-            <Text className="font-bold text-sm">{text}</Text>
+            <Text style={{flex:0.2}} className="font-bold text-sm">{text}</Text>
         </TouchableOpacity>
     )
 }

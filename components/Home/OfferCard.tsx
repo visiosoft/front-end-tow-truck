@@ -3,7 +3,7 @@ import { ImageBackground, TouchableOpacity, Text, View, StyleSheet } from 'react
 
 const OfferCard = ({ image, tag, text }: { image: any, tag: string, text: string }) => {
     return (
-        <TouchableOpacity style={{ width: "auto", aspectRatio: 5 / 4 }}>
+        <TouchableOpacity style={{ flex:6, aspectRatio: 5 / 4 }}>
             <ImageBackground
                 source={image}
                 style={{ flex: 1, borderRadius: 20 }}
