@@ -3,7 +3,7 @@ import { ImageBackground, TouchableOpacity, Text, View, StyleSheet } from 'react
 
 const OfferCard = ({ image, tag, text }: { image: any, tag: string, text: string }) => {
     return (
-        <TouchableOpacity style={{ flex:6, aspectRatio: 5 / 4 }}>
+        <TouchableOpacity style={{ flex: 6, aspectRatio: 5 / 4 }}>
             <ImageBackground
                 source={image}
                 style={{ flex: 1, borderRadius: 20 }}
@@ -23,9 +23,9 @@ export default OfferCard;
 
 const styles = StyleSheet.create({
     tag: {
-        alignSelf: 'flex-start', 
-        paddingHorizontal: 10, 
-        paddingVertical: 5,    
+        alignSelf: 'flex-start',
+        paddingHorizontal: 10,
+        paddingVertical: 5,
         borderRadius: 10,
         backgroundColor: "white",
         opacity: 0.75,

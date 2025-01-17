@@ -16,11 +16,11 @@ export default function TabLayout() {
                             <View className="flex-row items-center justify-between px-4 py-3">
                                 <MaterialIcons name="menu" size={30} className="text-gray-400" />
                                 <Image
-                                    style={{width:50,height:50}}
+                                    style={{ width: 50, height: 50 }}
                                     contentFit="contain"
                                     source={require("@/assets/images/truck.png")}
                                 />
-                                <View/>
+                                <View />
                             </View>
                             <ScrollView
                                 horizontal
