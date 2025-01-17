@@ -5,7 +5,7 @@ import useLocation from '@/hooks/useLocation';
 import { useEffect, useRef, useState } from 'react';
 import { FontAwesome, MaterialIcons, Ionicons, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
 
-const index = () => {
+export default function index(){
     const [initialRegion, setInitialRegion] = useState<undefined | Region>();
     const mapViewRef = useRef<MapView>(null);
     const bottomSheetRef = useRef<BottomSheet>(null);
@@ -15,10 +15,14 @@ const index = () => {
     const handleTruckPress = () => {
         bottomSheetRef.current?.expand();
     };
-    useEffect(() => {
-        (async () => {
+    useEffect(() => {         
+            setInterval(async () => {
             try {
-                let response = await fetch("https://cartowing-fefzgsd3huazfmfu.centralus-01.azurewebsites.net/api/Location");
+                let response = await fetch("https://cartowing-fefzgsd3huazfmfu.centralus-01.azurewebsites.net/api/Location", {
+                    headers: {
+                        "Content-Type":"application/json"
+                    }
+                });
                 if (response.ok) {
                     let drivers = await response.json();
                     setDrivers(drivers);
@@ -28,7 +32,7 @@ const index = () => {
             } finally {
                 setLoading(false);
             }
-        })();
+        },5000)
     }, [])
     useEffect(() => {
         if (location) {
@@ -188,7 +192,7 @@ const index = () => {
         </View>
     )
 }
-export default index
+
 const styles = StyleSheet.create({
     map: {
         width: Dimensions.get('window').width,

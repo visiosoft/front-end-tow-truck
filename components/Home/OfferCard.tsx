@@ -1,4 +1,4 @@
-import { BlurView } from 'expo-blur';
+
 import { ImageBackground, TouchableOpacity, Text, View, StyleSheet } from 'react-native';
 
 const OfferCard = ({ image, tag, text }: { image: any, tag: string, text: string }) => {
@@ -9,9 +9,9 @@ const OfferCard = ({ image, tag, text }: { image: any, tag: string, text: string
                 style={{ flex: 1, borderRadius: 20 }}
             >
                 <View className="p-5">
-                    <BlurView style={styles.tag} intensity={100} tint="extraLight">
+                    <View style={styles.tag}>
                         <Text style={styles.tagText}>{tag}</Text>
-                    </BlurView>
+                    </View>
                     <Text style={styles.text}>{text}</Text>
                 </View>
             </ImageBackground>

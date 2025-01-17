@@ -43,17 +43,9 @@
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
         }
       ],
-      [
-        "expo-asset",
-        {
-          "assets": [
-            "./assets/images/truck.png",
-            "./assets/images/fuel-truck.png"
-          ]
-        }
-      ],
       "expo-asset",
-      "expo-secure-store"
+      "expo-secure-store",
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true

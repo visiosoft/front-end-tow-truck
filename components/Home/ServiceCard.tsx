@@ -25,7 +25,7 @@ const ServiceCard = ({ text, imgSrc }: { text: string, imgSrc: any }) => {
                     style={{flex:0.8,aspectRatio:1/1}}
                     />
             </View>
-            <Text style={{flex:0.2}} className="font-bold text-sm">{text}</Text>
+            <Text style={{flex:0.3}} className="font-bold text-sm">{text}</Text>
         </TouchableOpacity>
     )
 }

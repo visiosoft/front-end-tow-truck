@@ -15,6 +15,10 @@ export default () => {
             }
             let location = await Location.getCurrentPositionAsync({});
             setLocation(location);
+            setInterval(async() => {
+                let location = await Location.getCurrentPositionAsync({});
+                setLocation(location);                
+            }, 5000);    
             setIsLoading(false);
             } catch (error) {
                 console.log(error);

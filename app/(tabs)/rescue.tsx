@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, Dimensions } from "react-native"
-import FuelTruck from "@/assets/images/fuel-truck.png"
+import FuelTruck from "@/assets/images/fuel_truck.png"
 import CarWash from "@/assets/images/car-wash.png"
 import Battery from "@/assets/images/battery.png"
 import BatteryReplacement from "@/assets/images/battery-replacement.jpg"
