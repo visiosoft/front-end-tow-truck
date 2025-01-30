@@ -35,10 +35,12 @@ const styles = StyleSheet.create({
     tagText: {
         color: "black",
         fontWeight: "bold",
+        fontFamily: "ProximaNova-Bold"
     },
     text: {
         color: "#F5F5F5",
         fontWeight: "bold",
         fontSize: 24,
+        fontFamily: "ProximaNova-Bold"
     },
 });

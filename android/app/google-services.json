@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "731964320695",
+    "project_id": "towtruck-2ce28",
+    "storage_bucket": "towtruck-2ce28.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731964320695:android:3060ed5582a4394db35632",
+        "android_client_info": {
+          "package_name": "com.zainali950.towtruck"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJMX0fM6kL_VkUpB9T6FBKDwdCdlO9b_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

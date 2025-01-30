@@ -72,16 +72,16 @@ function rescue() {
             <View className="p-5 gap-y-7 bg-white">
                 <View className="flex-row justify-between items-baseline">
                     <Text></Text>
-                    <Text className="font-bold text-xl text-[#1C1B1F]">Tow Truck</Text>
-                    <TouchableOpacity><Text className="text-[#50C4CD] font-semibold">login</Text></TouchableOpacity>
+                    <Text style={{ fontFamily: "ProximaNova-Bold" }} className="font-bold text-xl text-[#1C1B1F]">Tow Truck</Text>
+                    <TouchableOpacity><Text style={{ fontFamily: "ProximaNova-Semibold" }} className="text-[#50C4CD] font-semibold">login</Text></TouchableOpacity>
                 </View>
                 <View className="flex-row justify-between items-center">
                     <TouchableOpacity className="w-[49%] bg-[#F7F7F8] rounded-3xl px-2 py-4 flex-row justify-between items-center">
                         <View className="flex-row justify-between items-center">
                             <MaterialIcons className="p-1" name="location-on" size={30} color="#888888" />
                             <View>
-                                <Text className="font-bold text-sm">Islamabad</Text>
-                                <Text className="font-semibold text-sm text-[#888E9A]">Delivery</Text>
+                                <Text style={{ fontFamily: "ProximaNova-Bold" }} className="font-bold text-sm">Islamabad</Text>
+                                <Text style={{ fontFamily: "ProximaNova-Semibold" }} className="font-semibold text-sm text-[#888E9A]">Delivery</Text>
                             </View>
                         </View>
                         <IonIcons name="chevron-down" size={20} color={"#C1C6CF"} />
@@ -90,8 +90,8 @@ function rescue() {
                         <View className="flex-row justify-between items-center">
                             <IonIcons className="p-2" name="car" size={30} color="#888888" />
                             <View>
-                                <Text className="font-bold text-sm">Islamabad</Text>
-                                <Text className="font-semibold text-sm text-[#888E9A]">Delivery</Text>
+                                <Text style={{ fontFamily: "ProximaNova-Bold" }} className="font-bold text-sm">Islamabad</Text>
+                                <Text style={{ fontFamily: "ProximaNova-Semibold" }} className="font-semibold text-sm text-[#888E9A]">Delivery</Text>
                             </View>
                         </View>
                         <IonIcons name="chevron-down" size={20} color={"#C1C6CF"} />

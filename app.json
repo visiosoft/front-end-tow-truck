@@ -8,6 +8,11 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#967969"
+    },
     "ios": {
       "supportsTablet": true,
       "config": {
@@ -17,71 +22,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#967969"
       },
-      "package": "com.zainali950.towtruck"
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ],
-      [
-        "expo-location",
-        {
-          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
-        }
-      ],
-      "expo-asset",
-      "expo-secure-store",
-      "expo-font"
-    ],
-    "experiments": {
-      "typedRoutes": true
-    },
-    "extra": {
-      "router": {
-        "origin": false
-      },
-      "eas": {
-        "projectId": "62c643c8-9752-4d22-bb23-9b30e626f791"
-      }
-    }
-  }
-}
-
-{
-  "expo": {
-    "name": "tow-truck",
-    "slug": "tow-truck",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true,
-      "config": {
-        "usesNonExemptEncryption": false
-      }
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
+      "googleServicesFile": "./google-services.json",
       "package": "com.zainali950.towtruck"
     },
     "web": {
@@ -107,16 +50,22 @@
         }
       ],
       [
-        "expo-asset",
+        "expo-font",
         {
-          "assets": [
-            "./assets/images/truck.png",
-            "./assets/images/fuel-truck.png"
+          "fonts": [
+            "./assets/fonts/ProximaNova-Regular.otf",
+            "./assets/fonts/ProximaNova-Bold.otf",
+            "./assets/fonts/ProximaNova-Extrabold.otf",
+            "./assets/fonts/ProximaNova-Semibold.otf",
+            "./assets/fonts/ProximaNova-Thin.otf"
           ]
         }
       ],
       "expo-asset",
-      "expo-secure-store"
+      "expo-secure-store",
+      "expo-font",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth"
     ],
     "experiments": {
       "typedRoutes": true
